@@ -19,3 +19,7 @@ Mobile:
       Keep same animations, buttons, and colour schemes, but just formatted properly for the screen size
    Phones:
     Can just be a simple portfolio site with the same colour scheme as the rest. No need to too many complex animations
+
+
+Update after adding center box:
+On mobile, I can just make it so that the center box fills up entire screen once we get small enough. Will determine that point after adding content though

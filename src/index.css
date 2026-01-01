@@ -1,17 +1,42 @@
-/* Font is Inter, sourced from google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+/* Font is Cascadia Code, sourced from google fonts will need to install locally at some point to remove startup lag */
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 /* Basic definitions for HTML objects and page*/
 
 html {
+    background-color:#f1f1f1;
     /* By default we use the normal Inter-font */
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cascadia Code', sans-erif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
+:root {
+    overflow-x: hidden;
+    height:100%;
+    z-index: 0;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    scroll-behavior: smooth;
+}
 
+#root {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, p {
+    font-weight: 400;
+}
 
 
 

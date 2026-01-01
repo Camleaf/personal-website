@@ -1,0 +1,12 @@
+
+.head-wrapper {
+    width:50vw;
+    height:60vh;
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    border: .4rem solid darkslategray;
+    border-radius:.5rem;
+    background-color:#dedede;
+}
