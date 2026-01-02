@@ -1,18 +1,19 @@
 import "./Background.css"
 
 // The scattered tiles across the background which are filled
-function Tile() {
+function Tile(props:{colour:string,sidelength:string,x:number,y:number}) {
     
   // tileDimension will be dynamically generated eventually
   const tileDimension = {
-     "--color": "blue",
-     "--x": "1",
-     "--y": "3",
+     "--color": props.colour,
+     "--sidelength": props.sidelength,
+     "--x": props.x,
+     "--y": props.y,
   } as React.CSSProperties;
 
   return (
     <>
-        <div className="bg-block" style={tileDimension}/>
+        <div className="bg-tile" style={tileDimension}/>
     </>
   );
 }

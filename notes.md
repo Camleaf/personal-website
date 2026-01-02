@@ -1,6 +1,6 @@
 My personal notes for the direction of the site:
 
-#### jan 1, 2026
+### jan 1, 2026
 
 I have a few ideas for domain names but I think I can wait until I have finished the site
 Most portfolio websites have these base pages: Home, About, Projects. An optional page is Experiences, but that is sometimes put under About or Projects
@@ -22,4 +22,14 @@ Mobile:
 
 
 Update after adding center box:
-On mobile, I can just make it so that the center box fills up entire screen once we get small enough. Will determine that point after adding content though
+On mobile, I can just make it so that the center box fills up entire screen once we get small enough. Will determine that point after adding content though.
+
+#### IMPORTANT
+I have a new idea on what to do with the center box once I'm done:
+Make it kind of like a text file / code editor with line counts and stuff, in a theme similar-ish to tokyonight for dark mode, and i'll figure out something for light mode. Do some text highlighting as well. Have the space in the background able to be used for popup windows for projects and stuff.
+
+
+
+Not as important down here
+After having tested the site with the dark theme I think I'll stick fully to that. The snakes now will just be lines snaking their way through using pathfinding
+Or something. That animation will be very difficult but I think I can do it

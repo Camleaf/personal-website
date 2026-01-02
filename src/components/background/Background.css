@@ -10,13 +10,13 @@
 }
 
 
-.bg-block {
+.bg-tile {
     position:fixed; 
-    top:calc(var(--y) * 3rem); 
-    left:calc(var(--x) * 3rem); 
+    top:calc(var(--y) * var(--sidelength)); 
+    left:calc(var(--x) * var(--sidelength)); 
     box-sizing: border-box;
-    height:3rem; 
-    width:3rem; 
+    height:var(--sidelength);
+    width:var(--sidelength); 
     display:flex;
     align-items:center;
     justify-content:center;
