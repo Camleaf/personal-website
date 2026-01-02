@@ -1,15 +1,10 @@
-import { useEffect } from "react";
 import "./Background.css"
-import { definePath } from "./Background.snake";
-import type { tileWrapper } from "./Background.tile";
 // The scattered tiles across the background which are filled
-function Snake(props:{filled:tileWrapper[]}) {
+function Snake() {
     // I need to create the paths in the base background and then dynamically send them in here
   // gotta build that dynamically generated snake
    // Some starting ideas are precalculating an svg path and getting a line to follow i
-    useEffect(()=>{
-        definePath(props.filled,{x:0,y:0},{x:20,y:20})
-    },[props]) 
+    // have the snakes just straight-up take the path and configure style options from there 
 
     return (
         <>

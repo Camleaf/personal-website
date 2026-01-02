@@ -1,33 +1,37 @@
 import { useEffect, useState } from 'react';
 import "./Background.css";
-import type { tileWrapper, tileDimensionData} from "./Background.tile"
-import { getTileDimensions, makeBgTiles } from "./Background.tile"
+import type { tileWrapper, tileDimensionData} from "./Background.tile";
+import { getTileDimensions, makeBgTiles } from "./Background.tile";
+import { definePath } from "./Background.snake";
 import Tile from "./Tile";
-import Snake from "./Snake.tsx"
+//import Snake from "./Snake.tsx"
 
 function Background() {
     const [bgTiles, setBgTiles] = useState<tileWrapper[]>([]);
-    const [loaded, setLoaded] = useState<boolean>(false);
-
+    const [snakePaths, setSnakePaths] = useState<string[]>([]);
     // Initialize backgrund objects
     useEffect(()=>{
         // Initialize tiles
         const dimensionData: tileDimensionData = getTileDimensions(window.innerWidth, window.innerHeight)
-        setBgTiles(makeBgTiles(dimensionData));
-        
+        const tempBgTiles = makeBgTiles(dimensionData);
+        setBgTiles(tempBgTiles);
+        definePath(tempBgTiles,{x:0,y:0},{x:20,y:20}); // Testing func
+
         window.addEventListener('resize',()=>{
             const dimensionData: tileDimensionData = getTileDimensions(window.innerWidth, window.innerHeight)
             setBgTiles(makeBgTiles(dimensionData));
      
         });
-        setLoaded(true);
+        setSnakePaths([]);
+        console.log(snakePaths)
+        
     },[])
 
 
     return (
         <>
             <div className="bg-wrapper -z-99">
-            {(loaded) ? <Snake filled={bgTiles}/> : <></>}
+            
             </div>
             <div className="bg-wrapper">
                 {bgTiles.map((data,index)=> (

@@ -20,7 +20,8 @@ const makeKey = (p:point):string => `${p.x},${p.y}`;
 
 const bfs = (filled:tileWrapper[],start:point,end:point):point[] => {
     // use the bfs alg to find the best path
-    // Ok so this works. Could use a few optimizations.
+    // Ok so this works. Could use a few optimizations
+    // Checking with filled isn't working
     type node = {
         x:number,
         y:number,
