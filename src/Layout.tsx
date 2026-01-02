@@ -13,7 +13,10 @@ function Layout() {
   return (
     <>
         <Background />
-        <div className="head-wrapper">
+        <div 
+            // Add line below back once snake animation is done
+            //className="head-wrapper"
+            >
 
             <Router>
                 <Routes>

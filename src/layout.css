@@ -1,8 +1,4 @@
 
-/* possible colors 
- * #191B29
- *
- * */
 .head-wrapper {
     width:50vw;
     height:80vh;
@@ -12,6 +8,5 @@
     text-align: center;
     border: .4rem solid darkslategray;
     border-radius:.5rem;
-    /*backdrop-filter: blur(1rem);*/
     background-color: #222436;
 }

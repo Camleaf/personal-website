@@ -33,3 +33,5 @@ Make it kind of like a text file / code editor with line counts and stuff, in a 
 Not as important down here
 After having tested the site with the dark theme I think I'll stick fully to that. The snakes now will just be lines snaking their way through using pathfinding
 Or something. That animation will be very difficult but I think I can do it
+
+Still good to use the tokyonight theme is for this https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors/moon.lua
