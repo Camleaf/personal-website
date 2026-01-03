@@ -2,36 +2,51 @@ import { useEffect, useState } from 'react';
 import "./Background.css";
 import type { tileWrapper, tileDimensionData} from "./Background.tile";
 import { getTileDimensions, makeBgTiles } from "./Background.tile";
-import { definePath } from "./Background.snake";
+import { buildSnakePaths } from "./Background.snake";
 import Tile from "./Tile";
-//import Snake from "./Snake.tsx"
+import Snake from "./Snake.tsx"
 
 function Background() {
     const [bgTiles, setBgTiles] = useState<tileWrapper[]>([]);
-    const [snakePaths, setSnakePaths] = useState<string[]>([]);
+    const [snakePaths, setSnakePaths] = useState<string[]>();
+    const [dimensionData, setDimensionData] = useState<tileDimensionData>();
     // Initialize backgrund objects
     useEffect(()=>{
         // Initialize tiles
         const dimensionData: tileDimensionData = getTileDimensions(window.innerWidth, window.innerHeight)
+        setDimensionData(dimensionData);
+        
         const tempBgTiles = makeBgTiles(dimensionData);
         setBgTiles(tempBgTiles);
-        definePath(tempBgTiles,{x:0,y:0},{x:20,y:20}); // Testing func
-
+        
+        
         window.addEventListener('resize',()=>{
             const dimensionData: tileDimensionData = getTileDimensions(window.innerWidth, window.innerHeight)
-            setBgTiles(makeBgTiles(dimensionData));
-     
+            const tempBgTiles = makeBgTiles(dimensionData);
+
+            setBgTiles(tempBgTiles);
+            setDimensionData(dimensionData);
+
+            setSnakePaths(buildSnakePaths(tempBgTiles,dimensionData));
         });
-        setSnakePaths([]);
-        console.log(snakePaths)
-        
+        //Testing func
+        setSnakePaths(buildSnakePaths(tempBgTiles,dimensionData));
+            
     },[])
 
 
     return (
         <>
             <div className="bg-wrapper -z-99">
-            
+                {(snakePaths && dimensionData) ?
+                    snakePaths.map((snake,index)=>(
+                        <div key={index} className="snake-wrapper">
+                            <Snake maxFitX={dimensionData.maxFitX} maxFitY={dimensionData.maxFitY} path={snake} />
+                        </div>
+                    ))
+                  :
+                <></>
+                }
             </div>
             <div className="bg-wrapper">
                 {bgTiles.map((data,index)=> (

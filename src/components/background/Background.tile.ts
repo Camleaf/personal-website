@@ -5,7 +5,7 @@
 
 const tileTrialSidelength:number = 3; // In REM
 const tileFillPercent:number = 0.15; // 20% chance of any given tile being filled
-const darkModeColours:string[] = ["#9966CD","#4D86FB","#6EE194","#F26990","#F4A07A","#52CCCD","#FAEFAA"];
+export const colours:string[] = ["#9966CD","#4D86FB","#6EE194","#F26990","#F4A07A","#52CCCD","#FAEFAA"];
 
 export type tileWrapper = {
     sidelength:string, // Sidelength is string because it is in REM
@@ -53,7 +53,7 @@ export const makeBgTiles = (dimensionData: tileDimensionData):tileWrapper[] => {
     // We want to fill 20% of all tiles
     
     const tiles: tileWrapper[] = [];
-    const colourSet:string[] = darkModeColours;
+    const colourSet:string[] = colours;
     for (let row = 0;row<dimensionData.maxFitY;row++){
         for (let col = 0;col<dimensionData.maxFitX;col++){
             if (!(Math.random()<tileFillPercent)) continue;

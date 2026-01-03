@@ -25,15 +25,23 @@
     background-color:var(--color);
 }
 
+.snake-wrapper {
+    position:fixed;
+    top:0;
+    left:0;
+}
 
 .snake-highlight {
-    stroke-dasharray: 60 400; /* 60px highlight, 400px gap */
+    stroke-dasharray: var(--highlight) var(--gap); /* 5px highlight, 400px gap */
     stroke-dashoffset: 0;
-    animation: moveHighlight 2s linear infinite;
+    stroke: var(--colour);
+    animation: moveHighlight var(--duration) linear infinite;
+    animation-delay: var(--delay);
+    filter: brightness(1.50);
 }
 
 @keyframes moveHighlight {
   to {
-    stroke-dashoffset: -460;
+    stroke-dashoffset: var(--dashoffset);
   }
 }
