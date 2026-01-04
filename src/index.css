@@ -3,6 +3,7 @@
 /* Basic definitions for HTML objects and page*/
 
 html {
+    overflow:hidden;
     background-color:#f1f1f1;
     /* By default we use the normal Inter-font */
     font-family: 'Cascadia Code', sans-erif;
