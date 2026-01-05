@@ -4,7 +4,7 @@ import type { tileDimensionData } from "../background/Background.tile.ts";
 import Tile from "../background/Tile.tsx";
 import { pages, type page } from "./Nav.switch.ts";
 import "./Nav.css";
-
+// Holds the navbar and page-switch animation handlers
 function Nav() {
 
     const [dimensionData, setDimensionData] = useState<tileDimensionData>();
