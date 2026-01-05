@@ -41,3 +41,5 @@ Still good to use the tokyonight theme is for this https://github.com/folke/toky
 
 I have the snake and background animation finished, now I want to make a page-transition animation. I will make a temporary navbar, then on page transition have a ripple effect where the similar blocks to the backround will fade in wait and fade out in a wave pattern (or multiple different ones that trigger randomly).
 I think that my previous asthetic for the centre box is good, just without the terminal parts. A nice thing with the files at the top to click to switch to works.
+
+Test
