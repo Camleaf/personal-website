@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { getTileDimensions } from "../background/Background.tile.ts";
 import type { tileDimensionData } from "../background/Background.tile.ts";
 import Tile from "../background/Tile.tsx";
@@ -10,6 +10,7 @@ import "./Nav.css";
 function Nav() {
     const [dimensionData, setDimensionData] = useState<tileDimensionData>();
     const navigate = useNavigate(); // We need to define useNavitate inside the component file, but can pass it off to the .ts accessory once we define it
+    const location = useLocation();
 
     const refreshRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +32,7 @@ function Nav() {
                         // Each navbar item has a colour and name attached. 
                         <div className="navbar-item" 
                             key={index} 
-                            onClick={()=>{switchPage(page.name, navigate)}}
+                            onClick={()=>{switchPage(page.name, navigate, location)}}
                             style={{"--sidelength":dimensionData.sidelength} as React.CSSProperties}
                         >
                             
