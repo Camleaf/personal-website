@@ -35,7 +35,7 @@ export const switchPage = (name:string, navigate:NavigateFunction, location:Loca
         setTimeout(()=>{ // So that the animation can't be triggered again while running
             animationRunning = false;
             el.style.animation = "";
-        },780); // The animation time is 1000ms, but 780ms is when it the visible part finishes, so can be restarted
+        },850); // The animation time is 1000ms, but 780ms is when it the visible part finishes, so can be restarted
 
         animationRunning = true;
 
