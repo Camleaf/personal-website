@@ -5,11 +5,27 @@
     position:absolute;
     right:0;
     width:10rem;
-    height:2rem;
+    height:fit-content;
     border-bottom: .2rem solid darkslategray;
     border-left: .2rem solid darkslategray;
     border-bottom-left-radius: 0.5rem;
-
+    overflow:hidden;
     display:flex;
     flex-direction:column;
+    color:#898daf;    
+}
+
+.navbar-item {
+    background-color:#191B29;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    column-gap:0.5rem;
+    max-height:var(--sidelength);
+}
+
+.navbar-item:hover {
+    filter:brightness(.50);
+    transition: ease-in-out 200ms;
+    cursor:pointer;
 }

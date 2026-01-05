@@ -13,7 +13,7 @@
 }
 
 .bg-tile {
-    position:fixed; 
+    position:var(--posMode); 
     top:calc(var(--y) * var(--sidelength)); 
     left:calc(var(--x) * var(--sidelength)); 
     box-sizing: border-box;

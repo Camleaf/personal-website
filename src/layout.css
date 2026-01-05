@@ -2,7 +2,7 @@
 .term-wrapper {
     position:relative;
     width:50vw;
-    height:100vh;
+    height:80vh;
     display:flex;
     text-align: center;
     border: .4rem solid darkslategray;
