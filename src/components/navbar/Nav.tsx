@@ -19,6 +19,7 @@ function Nav() {
         console.log(dimensionData);
     },[])
 
+
     return (
         <>
             <div className="navbar-head">
