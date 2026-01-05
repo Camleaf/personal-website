@@ -1,4 +1,5 @@
 import { colours } from "../background/Background.tile.ts";
+import { type NavigateFunction } from "react-router-dom";
 
 export type page = {
     name:string,
@@ -6,9 +7,18 @@ export type page = {
 }
 
 export const pages:page[] = [
-    {name:"About", colour:colours[0]},
-    {name:"Resume", colour:colours[1]}, 
+    {name:"Home", colour:colours[0]},
+    {name:"About", colour:colours[1]}, 
     {name:"Projects", colour:colours[2]}, 
-    {name:"Contact", colour:colours[3]},
+    {name:"Resume", colour:colours[3]},
 ];
+
+
+export const switchPage = (name:string, navigate:NavigateFunction) => {
+        if (name === "Home") {
+            navigate('/');
+        } else {
+            navigate(name.toLowerCase());    
+        }
+    }
 

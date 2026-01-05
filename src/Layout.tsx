@@ -1,5 +1,4 @@
 import {
-    BrowserRouter as Router,
     Routes,
     Route,
 } from "react-router-dom";
@@ -17,11 +16,9 @@ function Layout() {
                 // Add line below back once snake animation is done
                 className="term-wrapper">
                 <Nav />
-                <Router>
-                    <Routes>
-                        <Route path="/*" element={<Home/>}/>
-                    </Routes>
-                </Router>
+                <Routes>
+                    <Route path="/*" element={<Home/>}/>
+                </Routes>
 
             </div>
         </>

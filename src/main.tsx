@@ -1,10 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import Layout from './Layout';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Layout />
+    <Router>
+        <Layout />
+    </Router>
   </StrictMode>,
 )

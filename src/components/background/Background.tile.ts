@@ -18,10 +18,10 @@ export type tileDimensionData = {
     maxFitY:number,
     maxFitX:number,
     sidelength:string, // sideLength and yOffset are stored in terms of rem
-    yOffset:string,
+    intsidelength:number,
 }
 
-const getRem = ():number => parseFloat(getComputedStyle(document.documentElement).fontSize);
+export const getRem = ():number => parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 
 export const getTileDimensions = (width:number, height:number):tileDimensionData => {
@@ -37,14 +37,11 @@ export const getTileDimensions = (width:number, height:number):tileDimensionData
     // first we calculate how many blocks we can fit with a sidelength of 3rem, then do a minor adjustment to make it look perfect by shifting the sidelength
     const sidelength = tileTrialSidelength + ((remWidth - (tileTrialSidelength * maxFitX))/maxFitX);
     
-    // To make the y centred, we calculate the yoffset the same way as avbove but without adding the trialsidelength again
-    const yOffset = remHeight - (tileTrialSidelength * maxFitY);
-    
     return {
         maxFitX: maxFitX,
         maxFitY: maxFitY,
         sidelength: sidelength + 'rem',
-        yOffset: yOffset + 'rem'
+        intsidelength: sidelength,
     };
 }
 
