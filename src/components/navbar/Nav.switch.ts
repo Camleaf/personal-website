@@ -21,7 +21,7 @@ export const switchPage = (name:string, navigate:NavigateFunction, location:Loca
         switchName = name;
         
         // Location checking is after switchname in case the user clicks back
-        if ("/" + name.toLowerCase() == location.pathname) return;
+        if ("/" + name.toLowerCase() == location.pathname || (name.toLowerCase()=="home" && location.pathname=="/")) return;
     
 
         const el = document.getElementById("refresh-mask-path")
