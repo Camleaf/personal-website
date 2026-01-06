@@ -2,10 +2,36 @@
 .term-wrapper {
     position:relative;
     width:50vw;
+    min-width:800px;
     height:80vh;
-    display:flex;
-    text-align: center;
     border: .4rem solid darkslategray;
     border-radius:.5rem;
     background-color: #222436;
+    display:flex;
+    flex-direction:row;
+}
+
+.term-content-wrapper {
+    position:relative;
+    left:0;
+    top:0;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    margin-left:0.5rem;
+}
+
+.text-highlight{
+    color:var(--colour);
+}
+
+.navbar-occupied-spacer { /* This class is used to block off the space that the navbar uses from having text go into it*/
+    float:right;
+    width:10rem;
+    min-width:10rem;
+    height:100%
+}
+
+.clickable {
+    cursor:pointer;
 }

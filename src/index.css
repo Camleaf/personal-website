@@ -6,7 +6,7 @@ html {
     overflow:hidden;
     background-color:#f1f1f1;
     /* By default we use the normal Inter-font */
-    font-family: 'Cascadia Code', sans-erif;
+    font-family: 'Cascadia Code', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -24,7 +24,7 @@ html {
     display: flex;
     align-items: center; 
     justify-content: center;
-    text-align: center;
+    text-align: left;
     scroll-behavior: smooth;
 }
 
@@ -36,6 +36,17 @@ html {
 }
 
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, pre, code {
     font-weight: 400;
+    color:#898daf; 
+}
+
+a {
+    font-weight:400;
+    text-decoration:none;
+    color:var(--colour);
+}
+
+a:hover {
+    filter: brightness(.50);
 }

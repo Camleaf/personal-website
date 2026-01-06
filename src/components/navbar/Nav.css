@@ -1,10 +1,10 @@
 
-
-
 .navbar-wrapper {
     position:absolute;
+    z-index:1;
     right:0;
     width:10rem;
+    min-width:10rem;
     height:fit-content;
     border-bottom: .2rem solid darkslategray;
     border-left: .2rem solid darkslategray;
@@ -32,6 +32,7 @@
 
 .refresh-wrapper {
     position:absolute;
+    z-index:1;
     pointer-events:none;
     overflow:hidden;
     top:0;
