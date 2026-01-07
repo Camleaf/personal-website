@@ -51,3 +51,10 @@ Then i can pretermine some svg paths that will quickly fill the entire screen in
 mask the filled screen of blocks onto the svg path.
 
 Just for testing I will start just by making a monocolor svg path to get the base logic done
+
+
+
+
+### jan 7 2026
+
+I'm starting to think that unfortunately this site may not be the best design. I guess I should try to think of a new asthetic. Shame that i put so much work it but i can always archive it
