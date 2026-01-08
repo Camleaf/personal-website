@@ -1,17 +1,18 @@
-/* Font is Cascadia Code, sourced from google fonts will need to install locally at some point to remove startup lag */
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+/* Font is Jetbrains mono, sourced from google fonts will need to install locally at some point to remove startup lag */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 /* Basic definitions for HTML objects and page*/
 
 html {
-    overflow:hidden;
-    background-color:#f1f1f1;
+     /* Palette - def use coolers.co for more ideas*/
     /* By default we use the normal Inter-font */
-    font-family: 'Cascadia Code', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
-    background-color:#1e2030;
+    background-color:var(--background);
+    color:var(--lightText);
+
 }
+
 
 :root {
     overflow-x: hidden;
@@ -22,7 +23,6 @@ html {
     scrollbar-width: none;
     box-sizing: border-box;
     display: flex;
-    align-items: center; 
     justify-content: center;
     text-align: left;
     scroll-behavior: smooth;
@@ -30,21 +30,17 @@ html {
 
 #root {
     display: flex !important;
-    align-items: center;
     justify-content: center;
     scroll-behavior: smooth;
 }
 
-
-h1, h2, h3, h4, p, pre, code {
-    font-weight: 400;
-    color:#898daf; 
+h1 {
+    font-size:2.2rem;
 }
 
 a {
     font-weight:400;
     text-decoration:none;
-    color:var(--colour);
 }
 
 a:hover {

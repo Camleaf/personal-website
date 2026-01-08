@@ -5,13 +5,9 @@ function Home() {
 
   return (
     <>
-        <div className="home-wrapper">
-           <p>
-            Hi There! Welcome to my website!
-            <br/>
-            Here you'll find 
-           </p> 
-        </div>
+        <h1>
+            Hello World
+        </h1>
     </>
   );
 }
