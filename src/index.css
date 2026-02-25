@@ -1,48 +1,74 @@
-/* Font is Jetbrains mono, sourced from google fonts will need to install locally at some point to remove startup lag */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-/* Basic definitions for HTML objects and page*/
-
-html {
-     /* Palette - def use coolers.co for more ideas*/
-    /* By default we use the normal Inter-font */
-    font-family: 'JetBrains Mono', monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background-color:var(--background);
-    color:var(--lightText);
-
-}
-
+@tailwind base;
+@tailwind components;
 
 :root {
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Mono';
     overflow-x: hidden;
-    height:100%;
     z-index: 0;
     position: relative;
     -ms-overflow-style: none;
     scrollbar-width: none;
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     scroll-behavior: smooth;
 }
-
 #root {
     display: flex !important;
+    align-items: center;
     justify-content: center;
     scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+@media (min-width: 1024px) {
+    :root {
+        text-align: left;
+    }
+}
+
+:root::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
-    font-size:2.2rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: #999;
+    font-weight: 500;
 }
 
 a {
-    font-weight:400;
-    text-decoration:none;
+    transition:ease-out;
+    transition-duration: 200ms;
+    filter:brightness(100%);
+    color: #60a5fa;
+
+}
+a:hover {
+    cursor: pointer;
+    filter:brightness(25%);
 }
 
-a:hover {
-    filter: brightness(.50);
+strong {
+    color: white;
 }
+@tailwind utilities;

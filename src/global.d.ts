@@ -1,1 +1,1 @@
-// Declare global types here
+declare const __SiteBase__: string;
