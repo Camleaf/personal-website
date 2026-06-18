@@ -1,7 +1,7 @@
 :root {
     --cl-accent: #60a5fa;
     --cl-accent-dark: #0f3d76;
-    --cl-accent-light: #7eace4;
+    --cl-accent-light: #bcd9fe;
     --cl-black: #111111;
     --cl-gray-6: #222222;
     --cl-gray-5: #333333;
@@ -16,7 +16,7 @@
 :root[data-theme='dark'] {
     --cl-accent: #60a5fa;
     --cl-accent-light: #0f3d76;
-    --cl-accent-dark: #7eace4;
+    --cl-accent-dark: #bcd9fe;
     --cl-white: #111111;
     --cl-gray-1: #222222;
     --cl-gray-2: #333333;

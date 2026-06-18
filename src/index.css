@@ -86,4 +86,9 @@ strong {
     width: 12rem;
 }
 
+.svg-border{
+  padding: 1rem;
+  background-image:url("./text-border.svg");
+}
+
 @tailwind utilities;

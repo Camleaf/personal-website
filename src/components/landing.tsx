@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+import Decorator from "./decorator"
 
 function Landing() {
     return (
@@ -10,6 +12,10 @@ function Landing() {
                         <h1 className="w-full text-center lg:text-left">Alexander Edwards</h1>
                         <h2 className="w-full text-center lg:text-left">aka <a href="https://github.com/camleaf">Camleaf</a></h2>
                         <p className="w-full text-center lg:text-left">Robotics & STEM</p>
+                        <br/>
+                        <Decorator>
+                            <a href="./resume.pdf"> <p className="text-4xl ">Resume</p> </a>
+                        </Decorator>
                     </div>
                 </div>
                  <div className={`${(window.innerWidth < 1024) ? 'w-[120vw]' : ''}`}></div>
@@ -17,4 +23,4 @@ function Landing() {
     )
 }
 
-export default Landing 
+export default Landing
