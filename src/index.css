@@ -2,8 +2,8 @@
 @tailwind components;
 
 :root {
-    background-color: white;
-    color: black;
+    background-color: var(--cl-gray-1);
+    color: var(--cl-gray-6);
     font-family: 'IBM Plex Mono';
     overflow-x: hidden;
     z-index: 0;
@@ -60,12 +60,12 @@ a {
     transition:ease-out;
     transition-duration: 200ms;
     filter:brightness(100%);
-    color: #60a5fa;
+    color: var(--cl-accent);
 
 }
 a:hover {
     cursor: pointer;
-    filter:brightness(25%);
+    color: var(--cl-accent-dark);
 }
 
 strong {

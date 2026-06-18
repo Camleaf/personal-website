@@ -8,7 +8,7 @@ function Landing() {
                 <div className={"box-border w-fit overflow-hidden flex flex-row items-start justify-start"}>
                     <div className="pt-8 pl-0 lg:pt-0 lg:pl-16 lg:w-auto flex flex-col items-start justify-center">
                         <h1 className="w-full text-center lg:text-left">Alexander Edwards</h1>
-                        <h2 className="w-full text-center lg:text-left">aka Camleaf</h2>
+                        <h2 className="w-full text-center lg:text-left">aka <a href="https://github.com/camleaf">Camleaf</a></h2>
                         <p className="w-full text-center lg:text-left">Robotics & STEM</p>
                     </div>
                 </div>

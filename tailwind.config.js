@@ -3,30 +3,19 @@ export default {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      keyframes: {
-        expandRight: {
-          '0%': { opacity: '0', maxWidth: '0', maxHeight: 'none' },
-          '100%': { opacity: '1', maxWidth: '100%', maxHeight: 'none' },
-        },
-        expandDown: {
-          '0%': { opacity: '0', maxHeight: '0', maxWidth: 'none' },
-          '100%': { opacity: '1', maxHeight: '100%', maxWidth: 'none' },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        fadeOut: {
-          '0%': { opacity: '1', display: "flex" },
-          '100%': { opacity: '0', display: "flex" },
-        },
-      },
-      animation: {
-        'slide-right': 'expandRight 2s ease-out forwards',
-        'slide-down': 'expandDown 2s ease-out forwards',
-        'fade-in': 'fadeIn 1s ease-in forwards',
-        'loaded': 'fadeOut 1s ease-in 3s forwards',
-      },
+        colors: {
+            "cl-accent":"var(--cl-accent)",
+            "cl-accent-dark":"var(--cl-accent-dark)",
+            "cl-accent-light":"var(--cl-accent-light)",
+            "cl-black":"var(--cl-black)",
+            "cl-gray-6":"var(--cl-gray-6)",
+            "cl-gray-5":"var(--cl-gray-5)",
+            "cl-gray-4":"var(--cl-gray-4)",
+            "cl-gray-3":"var(--cl-gray-3)",
+            "cl-gray-2":"var(--cl-gray-2)",
+            "cl-gray-1":"var(--cl-gray-1)",
+            "cl-white":"var(--cl-white)"
+        }
     },
   },
   plugins: [],

@@ -57,12 +57,12 @@ function Layout() {
             
 
             {/* Initial screen cover, email, + navbar & router */}
-            <div style={{ width: width+'px',marginTop: `${marginTop}px` }} className="gap-16 flex flex-col min-h-[120vh] items-center bg-white" ref={scrollRef}>
+            <div style={{ width: width+'px',marginTop: `${marginTop}px` }} className="gap-16 flex flex-col min-h-[120vh] items-center" ref={scrollRef}>
                
                 <div ref={divRef} className={`w-full h-full top-0 left-0 flex flex-row items-center align-middle justify-center`}> 
                         <Landing/>
                 </div>
-                <div className="gap-16 flex flex-col items-center justify-start w-full max-h-fit bg-white lg:px-32 box-border z-[0] relative top-0">
+                <div className="gap-16 flex flex-col items-center justify-start w-full max-h-fit lg:px-32 box-border z-[0] relative top-0">
                      
 
 
