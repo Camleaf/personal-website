@@ -2,13 +2,15 @@ import { useState, useEffect, useRef, Ref } from "react";
 import {
     Routes,
     Route,
+    useLocation,
 } from "react-router-dom";
 import Landing from "./landing";
 import Portfolio from "./portfolio";
+import { AnimatePresence } from "motion/react";
 
 function Layout() {
 
-
+    const location = useLocation();
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -27,12 +29,13 @@ function Layout() {
     return (
         <>    
             <div className="gap-16 w-screen h-screen flex items-center align-middle justify-center">
-               
-                <Routes>
-                    <Route index element={<div><Landing/></div>}/>
+                <AnimatePresence mode="wait" initial={false}>        
+                <Routes location={location} key={location.pathname}>
+                    <Route index element={<Landing/>}/>
                     <Route path="portfolio" element={<Portfolio/>}/>
 
                 </Routes>
+                </AnimatePresence>
             </div>
         </>
     );

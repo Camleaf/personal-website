@@ -81,12 +81,17 @@ strong {
     width: 12rem;
 }
 
-.svg-border{
-    padding: var(--border-pad);
-    background-image:url("./text-border.svg");
+
+
+/* 1. Define the Keyframes */
+@keyframes slideUpOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
 }
 
-
-
+@keyframes slideUpIn {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
 
 @tailwind utilities;

@@ -4,6 +4,8 @@ import Socials from "../socials";
 import Decorator from "../decoration/decorator";
 import InlineDecorator from "../decoration/inlineDecorator";
 import '../loader/loader.css'
+import { useInView } from "motion/react";
+import { useRef } from "react";
 
 interface propTypes{
     name:string,
@@ -18,10 +20,13 @@ interface propTypes{
 
 
 function ProjectHero({name, github="",description="Some important sample text",onClick=(name:string)=>{}}:propTypes){
-
+    const ref = useRef(null);
+    const isInView = useInView(ref, {
+        margin: "0px 100px -50px 0px"
+    })
 
     return (
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center" ref={ref}>
             <div className="relative z-10 w-fit h-full lg:w-1/2 items-end justify-items-end hero-load">
                 <Decorator>
                     <div className="w-[30rem] h-[20rem] overflow-hidden rounded-xl">

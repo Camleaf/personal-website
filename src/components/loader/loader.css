@@ -6,6 +6,7 @@
 }
 
 .hero-text-load {
+
     animation-name: textFade;
     animation-duration: 1.2s;
 }

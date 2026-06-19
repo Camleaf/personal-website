@@ -1,10 +1,21 @@
+import { AnimatePresence, motion } from "motion/react"
+import { Link } from "react-router-dom"
 import Decorator from "../components/decoration/decorator"
 import InlineDecorator from "../components/decoration/inlineDecorator"
 import '../components/loader/loader.css'
 import Socials from "../components/socials"
 
+
 function Landing() {
     return (
+            <motion.div 
+                initial={{ opacity: 1, scale: 1, y: "-75vh" }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                // 2. The critical Exit state when it leaves the DOM
+                exit={{ opacity: 0, scale: 1, y: "-75vh" }}
+                // Global timing control
+                transition={{ duration: 0.5, ease: 'easeInOut' }}            
+            >
             <div className="w-full cont h-full flex flex-col lg:flex-row items-center">
                 <div className="relative z-10 w-fit h-full lg:flex-1 items-end justify-items-end hero-load">
                     <div className="w-fit h-fit overflow-hidden rounded-xl">
@@ -35,15 +46,16 @@ function Landing() {
                                 </a>
                             </p>
                             <p className="text-3xl ">
-                                <a href="./portfolio">
+                                <Link to="/portfolio">
                                     <Decorator> Portfolio </Decorator>
-                                </a>
+                                </Link>
                             </p>
                         </div>
                         <br/>
                     </div>
                 </div>
             </div>
+            </motion.div>
     )
 }
 
