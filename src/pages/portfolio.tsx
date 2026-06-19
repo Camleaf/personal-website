@@ -1,6 +1,6 @@
 import "../index.css";
 
-function Main() {
+function Portfolio() {
 
 
 
@@ -11,6 +11,6 @@ function Main() {
             
         </>
     );
-    }
+}
 
-    export default Main;
+export default Portfolio;
