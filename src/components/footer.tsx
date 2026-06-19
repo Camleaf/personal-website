@@ -1,6 +1,7 @@
+import Decorator from "./decoration/decorator"
 import Navbar from "./navbar"
 function Footer(props:{scrollRef:any,marginTop:number}) {
-
+    
 
     return (
         <>
@@ -27,22 +28,28 @@ function Footer(props:{scrollRef:any,marginTop:number}) {
                     <h3>Contact</h3>
                     <div className="h-[0.125rem] w-[100%] bg-[#444] "/>
 
-
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpdTVwvHnQBhWZpDFrDlGKwJNJsNmPvnSSsQcGwXbltMwMVsJwjbrTfPVXWBcgVsjdLkBg" target="_blank" className="flex flex-row gap-2 hover:brightness-[300%] align-middle ease-out duration-200 cursor-pointer group">
-                        <img src="/icons/emailLogo.svg" className="w-6 h-6 group-hover:scale-110 ease-out duration-200"/>
-                        <p>bdaace@gmail.com</p>
+                    
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpdTVwvHnQBhWZpDFrDlGKwJNJsNmPvnSSsQcGwXbltMwMVsJwjbrTfPVXWBcgVsjdLkBg" target="_blank" className="text-cl-gray-6">
+                        <div className="flex flex-row gap-2 align-middle ease-out duration-200 cursor-pointer group">
+                            <img src="/icons/emailLogo.svg" className="w-6 h-6 group-hover:scale-110 group-gover:brightness-[300%] ease-out duration-200"/>
+                            <p>bdaace@gmail.com</p>
+                        </div>
                     </a>
                     
                     {/* insta */}
-                    <a href="https://www.instagram.com/_alexcedw/" target="_blank" className="flex flex-row gap-2 hover:brightness-[300%] align-middle ease-out duration-200 cursor-pointer group">
-                        <img src="/icons/instagramLogo.svg" className="w-6 h-6 group-hover:scale-110 ease-out duration-200"/>
-                        <p>_alexcedw</p>
+                    <a href="https://www.instagram.com/_alexcedw/" target="_blank" className="text-cl-gray-6">
+                        <div className="flex flex-row gap-2 align-middle ease-out duration-200 cursor-pointer group">
+                            <img src="/icons/instagramLogo.svg" className="w-6 h-6 group-hover:scale-110 group-gover:brightness-[300%] ease-out duration-200"/>
+                            <p>_alexcedw</p>
+                        </div>
                     </a>
 
                     {/* github */}
-                    <a href="https://github.com/camleaf" target="_blank" className="flex flex-row gap-2 align-middle hover:brightness-[300%] ease-out duration-200 cursor-pointer group">
-                        <img src="/icons/githubLogo.svg" className="w-6 h-6 group-hover:scale-110 ease-out duration-200"/>
-                        <p>Camleaf</p>
+                    <a href="https://github.com/camleaf" target="_blank" className="text-cl-gray-6">
+                        <div className="flex flex-row gap-2 align-middle ease-out duration-200 cursor-pointer group">
+                            <img src="/icons/githubLogo.svg" className="w-6 h-6 group-hover:scale-110 group-gover:brightness-[300%] ease-out duration-200"/>
+                            <p>Camleaf</p>
+                        </div>
                     </a> 
             
                 </div>

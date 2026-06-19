@@ -6,9 +6,11 @@ import {
 } from "react-router-dom";
 import Footer from './footer';
 import { FiMenu, FiX } from "react-icons/fi";
+import Decorator from "./decoration/decorator";
 
+
+// This is horrible in every sense of the word omg
 function Navbar(props:{scrollRef:any,marginTop:number,unformatted?:boolean}) {
-    // I am going to have to think about the mobile version of the navbar
     const navigate = useNavigate();
     const pages: string[] = ["Home","Projects"];
     const location = useLocation()
@@ -93,21 +95,26 @@ function Navbar(props:{scrollRef:any,marginTop:number,unformatted?:boolean}) {
         <>
             {pages.map((page,index)=>(
                 <div id={`${index}`} className="cursor-pointer" >
-                    <div onClick={()=>{switchPage(page)}}><p className="ease-out hover:brightness-[300%] duration-200 cursor-pointer">{page}</p></div>
+                     
+                    <div onClick={()=>{switchPage(page)}}><p className="ease-out hover:text-cl-accent duration-200 cursor-pointer">{page}</p></div>
                 </div>
             ))}
         </>
         );
     else if (window.innerWidth>800) {
         return ( 
-         <div className={` transition ease-out duration-300 ${(show)?"":"opacity-0 pointer-events-none"} h-40 items-center w-[100vw] fixed top-0 left-0 bg-gradient-to-b from-white to-transparent`}>
+         <div className={` transition ease-out duration-300 ${(show)?"":"opacity-0 pointer-events-none"} h-40 items-center w-[100vw] fixed top-0 left-0 bg-gradient-to-b from-cl-white to-transparent`}>
             <div className="fixed w-[100vw] top-0 left-0 h-20  flex flex-row items-center ">
                 <div className="mx-10 flex flex-row items-center">
                     
                     <div className="flex flex-row text-2xl">  
                         {pages.map((page,index)=>(
                             <div id={`${index}`} className="mx-5 cursor-pointer" >
-                                <div onClick={()=>{switchPage(page)}}><h3 className="ease-out hover:text-[#999] duration-200 cursor-pointer">{page}</h3></div>
+                                <div onClick={()=>{switchPage(page)}}>    
+                                    <Decorator clickable={true} gap={1} > 
+                                        <h3 className=" cursor-pointer w-fit h-fit">{page}</h3>
+                                    </Decorator>
+                                </div>
                             </div>
                         ))
                         }

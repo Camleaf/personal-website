@@ -16,6 +16,7 @@
     justify-content: center;
     text-align: center;
     scroll-behavior: smooth;
+    font-weight:500;
 }
 #root {
     display: flex !important;
@@ -51,21 +52,15 @@ h3 {
     font-size: 1.2rem;
 }
 
-p {
-    color: #333;
-    font-weight: 500;
-}
-
 a {
     transition:ease-out;
     transition-duration: 200ms;
-    filter:brightness(100%);
-    color: var(--cl-accent);
+    color: var(--cl-gray-6);
 
 }
 a:hover {
     cursor: pointer;
-    color: var(--cl-accent-dark);
+    color: var(--cl-accent);
 }
 
 strong {
@@ -87,8 +82,11 @@ strong {
 }
 
 .svg-border{
-  padding: 1rem;
-  background-image:url("./text-border.svg");
+    padding: var(--border-pad);
+    background-image:url("./text-border.svg");
 }
+
+
+
 
 @tailwind utilities;
