@@ -13,7 +13,7 @@ function Portfolio() {
 
     return (
         <>
-            <div className="w-full h-full flex items-start justify-center pt-[20vh]">
+            <div className="w-full h-full flex items-start justify-center pt-[10vh]">
                 <motion.div 
                     initial={{ opacity: 1, scale: 1, y: "75vh" }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}

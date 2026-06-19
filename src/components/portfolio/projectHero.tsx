@@ -1,52 +1,54 @@
 
-
 import Socials from "../socials";
 import Decorator from "../decoration/decorator";
 import InlineDecorator from "../decoration/inlineDecorator";
 import '../loader/loader.css'
-import { useInView } from "motion/react";
+import { useInView, motion, Variants } from "motion/react";
 import { useRef } from "react";
 
 interface propTypes{
     name:string,
     xOffset?:number, // converts to rem
     yOffset?:number,
-    height?:number,
-    width?:number,
     github?:string,
+    timeframe?:string,
     description?:string,
+    imageEnd?:string,
     onClick?:(name:string)=>void
 }
 
-
-function ProjectHero({name, github="",description="Some important sample text",onClick=(name:string)=>{}}:propTypes){
+function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx", xOffset=-6, yOffset=-3, github="",description="Some important sample text",onClick=(name:string)=>{}}:propTypes){
     const ref = useRef(null);
-    const isInView = useInView(ref, {
-        margin: "0px 100px -50px 0px"
-    })
 
     return (
-        <div className="flex flex-col lg:flex-row items-center" ref={ref}>
+        <div className="flex flex-col lg:flex-row items-start" ref={ref}>
             <div className="relative z-10 w-fit h-full lg:w-1/2 items-end justify-items-end hero-load">
-                <Decorator>
-                    <div className="w-[30rem] h-[20rem] overflow-hidden rounded-xl">
-                        <img className="w-[40rem] max-w-none pr-[2rem]" src={`/portfolio/heros/${name}.jpg`}/>
-                    </div>    
-                </Decorator>
+                        <div className="w-[30rem] h-[20rem] overflow-hidden rounded-xl">
+                            <img 
+                                className={`w-[40rem] max-w-none`} 
+                                style={{marginTop:`${yOffset}rem`, marginLeft:`${yOffset}rem`}}
+                                width="40rem" 
+                                src={`/portfolio/heros/${name}.${imageEnd}`}
+                                />
+                        </div>    
             </div>
-            <div className={"relative z-0 box-border w-fit h-full overflow-hidden lg:w-1/2 flex flex-row items-start justify-start"}>
-                <div className="pt-8 pl-0 lg:pt-0 lg:pl-8 lg:w-auto flex flex-col items-start justify-center hero-text-load">
+            <div className={"relative z-0 box-border w-fit h-[20rem] overflow-hidden lg:w-1/2 flex flex-col items-start justify-start"}>
+                <div className="pl-0 pt-8 lg:pl-8 lg:w-auto h-full flex flex-col items-start justify-start hero-text-load">
                     <Socials 
                         github={github}
                     />
                     <h1 className="w-full text-center lg:text-left">{name}</h1>
+                    <p>{timeframe}</p>
                     <br/>
-                    <p className="w-64 text-center lg:text-left">{description}</p>
+                    <p className="w-[30rem] text-center lg:text-left">{description}</p>
                     <br/>
+                    
                 </div>
+                <p className="lg:pl-8 text-2xl cursor-pointer">
+                    <Decorator> See More </Decorator>
+                </p>
             </div>
         </div>
-
     );
 
 }
