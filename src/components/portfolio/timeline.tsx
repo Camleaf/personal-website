@@ -1,6 +1,8 @@
 
+import { Link } from 'react-router-dom';
 import ProjectHero from './projectHero';
-
+import Decorator from '../decoration/decorator';
+import "./portfolio.css";
 
 
 
@@ -9,7 +11,20 @@ function Timeline(){
 
     return (
        <>
-            <div className="flex flex-col gap-8 my-[16rem]">
+            <div className="flex items-center flex-col gap-8 my-[4rem]">
+                <div className="w-full text-center grid grid-cols-[1fr_4rem]">
+                    <h1>
+                        My Portfolio
+                    </h1>
+                    
+                    <h2 className=" text-3xl fadein">
+                        <Link to="/">
+                            <Decorator> Home </Decorator>
+                        </Link>
+                    </h2>
+                
+                </div>
+                
                 <ProjectHero 
                     name="Mechmania" 
                     timeframe = "jun. 2025 - current"
