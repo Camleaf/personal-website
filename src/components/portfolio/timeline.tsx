@@ -13,7 +13,7 @@ function Timeline(){
        <>
             <div className="flex items-center flex-col gap-8 my-[4rem]">
                 <div className="w-full text-center grid grid-cols-[1fr_4rem]">
-                    <h1>
+                    <h1 className="titleSlide">
                         My Portfolio
                     </h1>
                     

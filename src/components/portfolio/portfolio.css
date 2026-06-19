@@ -6,6 +6,11 @@
     animation-timing-function: ease-in-out;
 }
 
+.titleSlide {
+    animation-name:titleSlide;
+    animation-duration:1.2s;
+}
+
 @keyframes fadeIn{
   0% {
     opacity: 0;
@@ -15,5 +20,17 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes titleSlide {
+  0% {
+    transform: translateX(8rem);
+  }
+  70% {
+    transform: translateX(8rem);
+  }
+  100% {
+    transform: translateX(0) scale(1);
   }
 }
