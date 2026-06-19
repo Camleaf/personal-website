@@ -1,27 +1,44 @@
+
+
+.hero-load {
+    animation-name: centreStart;
+    animation-duration: 1s;
+}
+
+.hero-text-load {
+    animation-name: textFade;
+    animation-duration: 1s;
+}
+
 @keyframes centreStart {
   0% {
-    transform: translateX(25vw);
+    transform: translateX(20rem);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
   50% {
-    transform: translateX(25vw);
+    transform: translateX(20rem);
   }
   100% {
     transform: translateX(0) scale(1);
   }
 }
 
-@keyframes textfade {
-  0%, 65% {
+@keyframes textFade {
+  0% {
+    transform: translateX(-25vw);
     opacity: 0;
-    transform: translateY(10px);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-25vw);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0) scale(1);
   }
 }
 
