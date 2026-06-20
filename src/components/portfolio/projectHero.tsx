@@ -41,7 +41,7 @@ function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx",
                         <Socials 
                             github={github}
                         />
-                        <h1 className="sm:max-w-[90%] md:w-full text-center lg:text-left">{name}</h1>
+                        <h1 className="sm:max-w-[90%] md:w-full md:max-w-none text-center lg:text-left">{name}</h1>
                         <p>{timeframe}</p>
                         <br/>
                         <p className="sm:max-w-[80%] md:max-w-[30rem] text-left">{description}</p>
