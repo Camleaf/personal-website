@@ -11,6 +11,7 @@ function Timeline(){
 
     return (
        <>
+       
             <div className="flex items-center flex-col gap-8 my-[4rem]">
                 <div className="w-full text-center grid grid-cols-[1fr_4rem]">
                     <h1 className="titleSlide">
@@ -24,7 +25,7 @@ function Timeline(){
                     </h2>
                 
                 </div>
-                
+                 
                 <ProjectHero 
                     name="Mechmania" 
                     timeframe = "jun. 2025 - current"
@@ -43,6 +44,7 @@ function Timeline(){
                     imageEnd="png"
                 />
             </div>
+       
        </>
 
     );
