@@ -17,6 +17,11 @@ export default {
             "cl-white":"var(--cl-white)"
         }
     },
+    screens: {
+      'sm': '0px',
+      'md': '590px',
+      'lg': '1200px',
+    }
   },
   plugins: [],
 }

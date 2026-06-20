@@ -43,3 +43,13 @@
   }
 }
 
+@media (max-width: 1200px) {
+    .hero-load{
+        animation:none
+    }
+    .hero-text-load{
+        animation:none
+    }
+}
+
+

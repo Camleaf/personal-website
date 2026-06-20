@@ -34,3 +34,9 @@
     transform: translateX(0) scale(1);
   }
 }
+
+@media (max-width: 1200px) {
+    .titleSlide {
+        animation:none
+    }
+}
