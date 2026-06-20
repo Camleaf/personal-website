@@ -1,0 +1,35 @@
+[
+    {
+        "name":"Mechmania",
+        "xOffset":0,
+        "yOffset":-2,
+        "github":"https:github.com/mech-mania",
+        "timeframe":"jun. 2025 - current",
+        "description":"An annual robotics competition hosting over 150 students from schools across Waterloo Region.",
+        "extLink":"https://mechmania.ca",
+        "imageEnd":"jpg"
+    },
+
+    {
+        "name":"2702 team member",
+        "xOffset":-3,
+        "yOffset":-3,
+        "github":"",
+        "timeframe":"sept. 2025 - current",
+        "description":"Part of design team for the turret, and on programming team. Top 0.2% in the world by EPA.",
+        "extLink":"https://2702rebels.com",
+        "imageEnd":"jpg"
+    },
+
+    {
+        "name":"Learn",
+        "xOffset":-3,
+        "yOffset":-3,
+        "github":"https://github.com/mech-mania/learn",
+        "timeframe":"jun. 2026 - current",
+        "description":"A knowledgebase of free robotics lessons and guides",
+        "extLink":"https://learn.mechmania.ca",
+        "imageEnd":"png"
+    }
+]
+

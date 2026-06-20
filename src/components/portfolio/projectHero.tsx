@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import ProjectDetails from "./projectDetails";
 import { AnimatePresence } from "motion/react";
 
-interface propTypes{
+export type projectHeroProps = {
     name:string,
     xOffset?:number, // converts to rem
     yOffset?:number,
@@ -16,10 +16,10 @@ interface propTypes{
     timeframe?:string,
     description?:string,
     imageEnd?:string,
-    onClick?:(name:string)=>void
+    extLink:string,
 }
 
-function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx", xOffset=-6, yOffset=-3, github="",description="Some important sample text",onClick=(name:string)=>{}}:propTypes){
+function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx", xOffset=-3, yOffset=-3, github="",extLink, description="Some important sample text"}:projectHeroProps){
     const ref = useRef(null);
     const [expanded,setExpanded] = useState<boolean>(false);
 
@@ -30,7 +30,7 @@ function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx",
                             <div className="w-[30rem] h-[20rem] overflow-hidden rounded-xl">
                                 <img 
                                     className={`w-[40rem] max-w-none`} 
-                                    style={{marginTop:`${yOffset}rem`, marginLeft:`${yOffset}rem`}}
+                                    style={{marginTop:`${yOffset}rem`, marginLeft:`${xOffset}rem`}}
                                     width="40rem" 
                                     src={`/portfolio/heros/${name}.${imageEnd}`}
                                     />
@@ -48,17 +48,13 @@ function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx",
                         <br/>
                         
                     </div>
-                    <p className="lg:pl-8 text-2xl cursor-pointer" onClick={()=>{setExpanded(!expanded)}}>
-                        <Decorator> {expanded?"Collapse":"See More"} </Decorator>
-                    </p>
+                    <a className="lg:pl-8" href={extLink} target="_blank">
+                        <p className="text-2xl cursor-pointer" onClick={()=>{setExpanded(!expanded)}}>
+                            <Decorator>See More</Decorator>
+                        </p>
+                    </a>
                 </div>
             </div>
-            <AnimatePresence>
-            {(expanded) &&
-            
-            <ProjectDetails bigDescription={"very long text that is written very long on purpose"}/>
-            }
-            </AnimatePresence>
         </motion.div>
     );
 
