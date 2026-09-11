@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 // This switches between dev server and production servers
 const API_URI = process.env.DEPLOYMENT_ENVIRONMENT === 'production'
   ? 'https://api.mechmania.ca'
@@ -8,7 +8,7 @@ const API_URI = process.env.DEPLOYMENT_ENVIRONMENT === 'production'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),ViteImageOptimizer()],
   build: {
     outDir: 'dist', // Ensure this is correct
     rollupOptions: {
