@@ -28,12 +28,11 @@ function Layout() {
 
     return (
         <>    
-            <div className="gap-16 w-screen h-screen flex items-center align-middle justify-center">
+            <div className="gap-16 w-screen h-screen flex align-middle justify-center flex-col">
                 <AnimatePresence mode="wait" initial={false}>        
                 <Routes location={location} key={location.pathname}>
-                    <Route index element={<Landing/>}/>
                     <Route path="portfolio" element={<Portfolio/>}/>
-
+                    <Route path="*" element={<Landing/>}/>
                 </Routes>
                 </AnimatePresence>
             </div>

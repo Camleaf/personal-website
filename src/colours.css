@@ -12,13 +12,13 @@
     --cl-white: #ffffff;
 }
 
-
-:root[data-theme='dark'] {
+/*
+:root {
     --cl-accent: #60a5fa;
     --cl-accent-light: #0f3d76;
     --cl-accent-dark: #bcd9fe;
     --cl-white: #111111;
-    --cl-gray-1: #222222;
+    --cl-gray-1: #0a0915;
     --cl-gray-2: #333333;
     --cl-gray-3: #555555;
     --cl-gray-4: #888888;
@@ -27,4 +27,4 @@
     --cl-black: #ffffff;
 }
 
-
+*/

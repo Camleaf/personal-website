@@ -50,14 +50,14 @@ function ProjectHero({name, imageEnd="jpg", timeframe="month xxxx - month xxxx",
                     </div>
                     <a className="lg:pl-8 sm:hidden lg:flex" href={extLink} target="_blank">
                         <p className="text-2xl cursor-pointer" onClick={()=>{setExpanded(!expanded)}}>
-                            <Decorator>See More</Decorator>
+                            <Decorator>see more</Decorator>
                         </p>
                     </a>
                 </div>
 
                 <a className="lg:pl-8 sm:flex pt-8 lg:hidden order-3" href={extLink} target="_blank">
                     <p className="text-2xl cursor-pointer" onClick={()=>{setExpanded(!expanded)}}>
-                        <Decorator>See More</Decorator>
+                        <Decorator>see more</Decorator>
                     </p>
                 </a>
             </div>
