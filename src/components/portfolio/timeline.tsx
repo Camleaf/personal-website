@@ -27,37 +27,7 @@ function Timeline(){
     return (
        <>
        
-            <div className="flex items-center flex-col gap-8 my-[4rem]">
-                <div className="w-full text-center sm:flex sm:flex-col sm:items-center md:grid md:grid-cols-[1fr_4rem]">
-                    <h1 className="titleSlide sm:order-2 md:order-1">
-                        my projects
-                    </h1>
-                    
-                    <h2 className=" text-3xl fadein sm-order-2 md:order-2">
-                        <Link to="/">
-                            <Decorator> home </Decorator>
-                        </Link>
-                    </h2>
-                
-                </div>
-                
-                {data.map((project:projectHeroProps,index:number)=>(
-                    <ProjectHero 
-                        name={project.name}
-                        timeframe={project.timeframe}
-                        description={project.description}
-                        yOffset={project.yOffset}
-                        xOffset={project.xOffset}
-                        extLink={project.extLink}
-                        imageEnd={project.imageEnd}
-                        github={project.github}
-                        
-                    />
-                    
-                ))}
-
-            </div>
-       
+                  
        </>
 
     );

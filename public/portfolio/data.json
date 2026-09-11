@@ -1,35 +1,90 @@
 [
     {
-        "name":"Mechmania",
-        "xOffset":0,
-        "yOffset":-2,
-        "github":"https:github.com/mech-mania",
-        "timeframe":"jun. 2025 - current",
-        "description":"An annual robotics competition hosting over 150 students from schools across Waterloo Region.",
-        "extLink":"https://mechmania.ca",
-        "imageEnd":"jpg"
+        "name":"mechmania website",
+        "description":"Website for an annual robotics competition hosting 150+ students and 12+ schools across waterloo region",
+        "tags":[
+            "React", "Typescript", "Vite", "Turbo", "TailwindCSS"
+        ],
+        "links":[
+            {
+                "text":"website",
+                "link":"https://mechmania.ca",
+                "icon":""
+
+            },
+            {
+                "text":"source",
+                "link":"https://github.com/Mech-Mania/website",
+                "icon":""
+            }
+        ],
+        "heroImage":""
     },
 
     {
-        "name":"2702 team member",
-        "xOffset":-3,
-        "yOffset":-3,
-        "github":"",
-        "timeframe":"sept. 2025 - current",
-        "description":"Part of design team for the turret, and on programming team. Top 0.2% in the world by EPA.",
-        "extLink":"https://2702rebels.com",
-        "imageEnd":"jpg"
+        "name":"mechmania learn",
+        "description":"Open-source lesson collection for all competing Mechmania teams, made with Astro",
+        "tags":[
+            "Astro", "Vite", "Markdown"
+        ],
+        "links":[
+            {
+                "text":"website",
+                "link":"https://learn.mechmania.ca",
+                "icon":""
+
+            },
+            {
+                "text":"source",
+                "link":"https://github.com/Mech-Mania/learn",
+                "icon":""
+            }
+        ],
+        "heroImage":""
     },
 
     {
-        "name":"Learn",
-        "xOffset":-3,
-        "yOffset":-3,
-        "github":"https://github.com/mech-mania/learn",
-        "timeframe":"jun. 2026 - current",
-        "description":"A knowledgebase of free robotics lessons and guides",
-        "extLink":"https://learn.mechmania.ca",
-        "imageEnd":"png"
+        "name":"holo",
+        "description":"A custom 3d-printed mecanum drivetrain capable of field-centric holonomic motion",
+        "tags":[
+            "3D printed", "C++", "Solidworks", "CMake", "Esp-Arduino"
+        ],
+        "links":[
+            {
+                "text":"demonstration",
+                "link":"https://youtube.com/NOT_UPLOADED_YET",
+                "icon":""
+
+            },
+            {
+                "text":"source",
+                "link":"https://github.com/Camleaf/holo",
+                "icon":""
+            }
+        ],
+        "heroImage":""
+    },
+    
+    {
+        "name":"portfolio site",
+        "description":"Personal portfolio site made with react",
+        "tags":[
+            "React", "Typescript", "Vite", "TailwindCSS"
+        ],
+        "links":[
+            {
+                "text":"website",
+                "link":"alexcedw.vercel.app",
+                "icon":""
+
+            },
+            {
+                "text":"source",
+                "link":"https://github.com/Camleaf/personal-website",
+                "icon":""
+            }
+        ],
+        "heroImage":""
     }
 ]
 
