@@ -7,18 +7,18 @@
         ],
         "links":[
             {
-                "text":"website",
+                "text":"Website",
                 "link":"https://mechmania.ca",
-                "icon":""
+                "icon":"globe.svg"
 
             },
             {
-                "text":"source",
+                "text":"Source",
                 "link":"https://github.com/Mech-Mania/website",
-                "icon":""
+                "icon":"githubLogo.svg"
             }
         ],
-        "heroImage":""
+        "heroImage":"mechmania.jpg"
     },
 
     {
@@ -29,18 +29,18 @@
         ],
         "links":[
             {
-                "text":"website",
+                "text":"Website",
                 "link":"https://learn.mechmania.ca",
-                "icon":""
+                "icon":"globe.svg"
 
             },
             {
-                "text":"source",
+                "text":"Source",
                 "link":"https://github.com/Mech-Mania/learn",
-                "icon":""
+                "icon":"githubLogo.svg"
             }
         ],
-        "heroImage":""
+        "heroImage":"mechmania-learn.png"
     },
 
     {
@@ -51,15 +51,15 @@
         ],
         "links":[
             {
-                "text":"demonstration",
+                "text":"Video",
                 "link":"https://youtube.com/NOT_UPLOADED_YET",
-                "icon":""
+                "icon":"video.svg"
 
             },
             {
-                "text":"source",
+                "text":"Source",
                 "link":"https://github.com/Camleaf/holo",
-                "icon":""
+                "icon":"githubLogo.svg"
             }
         ],
         "heroImage":""
@@ -73,18 +73,18 @@
         ],
         "links":[
             {
-                "text":"website",
+                "text":"Website",
                 "link":"alexcedw.vercel.app",
-                "icon":""
+                "icon":"globe.svg"
 
             },
             {
-                "text":"source",
+                "text":"Source",
                 "link":"https://github.com/Camleaf/personal-website",
-                "icon":""
+                "icon":"githubLogo.svg"
             }
         ],
-        "heroImage":""
+        "heroImage":"portfolio-site.png"
     }
 ]
 

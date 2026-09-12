@@ -1,5 +1,4 @@
 import {motion} from "motion/react"
-import ProjectHero from "../components/portfolio/projectHero";
 import Timeline from "../components/portfolio/timeline";
 import "../index.css";
 
@@ -23,7 +22,7 @@ function Portfolio() {
                     transition={{ duration: 0.5, ease: 'easeInOut' }}            
                 >
                     <Timeline />
-
+                    <div className="my-32"/>
                 </motion.div>
             </div>
         </>
