@@ -26,7 +26,7 @@ function Timeline(){
     return (
         <>
             <motion.div>
-            <div className="grid md:grid-cols-2 gap-8 w-[80vw] lg:w-[70rem]">
+            <div className="sm:flex sm:justify-center sm:m-auto sm:flex-wrap md:grid md:grid-cols-2 gap-7 w-[90%] lg:w-[70rem]">
                 {data.map((val:projectHeroProps,index)=>(
                     <div
                       key={index}
