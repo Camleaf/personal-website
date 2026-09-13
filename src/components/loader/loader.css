@@ -22,7 +22,7 @@
     transform: translateX(20rem);
   }
   100% {
-    transform: translateX(0) scale(1);
+    transform: translateX(0rem) scale(1);
   }
 }
 
@@ -53,3 +53,20 @@
 }
 
 
+@media (min-width:1600px){
+    @keyframes centreStart {
+  0% {
+        transform: translateX(25rem);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      70% {
+        transform: translateX(25rem);
+      }
+      100% {
+        transform: translateX(0rem) scale(1);
+      }
+    }
+}
