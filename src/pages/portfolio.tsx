@@ -1,7 +1,9 @@
 import {motion} from "motion/react"
-import ProjectHero from "../components/portfolio/projectHero";
 import Timeline from "../components/portfolio/timeline";
 import "../index.css";
+import Decorator from "../components/decoration/decorator";
+import { Link } from "react-router-dom";
+import Navtext from "../components/navtext";
 
 function Portfolio() {
 
@@ -22,8 +24,11 @@ function Portfolio() {
                     // Global timing control
                     transition={{ duration: 0.5, ease: 'easeInOut' }}            
                 >
+                    <div className="flex flex-row gap-4 flex-wrap text-justify mb-10 justify-center">
+                     <Navtext/> 
+                    </div>
                     <Timeline />
-
+                    <div className="my-32"/>
                 </motion.div>
             </div>
         </>

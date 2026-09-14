@@ -1,64 +1,86 @@
 
 import { Link } from 'react-router-dom';
-import ProjectHero from './projectHero';
 import Decorator from '../decoration/decorator';
 import "./portfolio.css";
 import { useState, useEffect } from 'react';
-import type { projectHeroProps } from './projectHero';
+import data from '../../assets/portfolio-data.json'
+import {motion} from "motion/react"
+import InlineDecorator from "../decoration/inlineDecorator"
 
-type jsonData = projectHeroProps[];
+
+export type projectHeroProps = {
+    name:string,
+    description:string,
+    links:{text:string,link:string,icon:string}[],
+    tags:string[],
+    heroImage:string,
+}
 
 
 function Timeline(){
     
-    const [data, setData] = useState<jsonData>([]);
     useEffect(() => {
         
-        fetch('/portfolio/data.json') // Adjust the path if your file is in a subfolder
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('file no exist');
-            }
-            return response.json();
-          })
-          .then(data => setData(data))
-          .catch(error => console.error('err on fetch:', error));
+        console.log(data);
       }, []);
     return (
-       <>
-       
-            <div className="flex items-center flex-col gap-8 my-[4rem]">
-                <div className="w-full text-center sm:flex sm:flex-col sm:items-center md:grid md:grid-cols-[1fr_4rem]">
-                    <h1 className="titleSlide sm:order-2 md:order-1">
-                        my projects
-                    </h1>
-                    
-                    <h2 className=" text-3xl fadein sm-order-2 md:order-2">
-                        <Link to="/">
-                            <Decorator> home </Decorator>
-                        </Link>
-                    </h2>
-                
-                </div>
-                
-                {data.map((project:projectHeroProps,index:number)=>(
-                    <ProjectHero 
-                        name={project.name}
-                        timeframe={project.timeframe}
-                        description={project.description}
-                        yOffset={project.yOffset}
-                        xOffset={project.xOffset}
-                        extLink={project.extLink}
-                        imageEnd={project.imageEnd}
-                        github={project.github}
-                        
-                    />
-                    
-                ))}
+        <>
+            <motion.div>
+            <div className="sm:flex sm:justify-center sm:m-auto sm:flex-wrap md:grid md:grid-cols-2 gap-7 w-[90%] lg:w-[70rem]">
+                {data.map((val:projectHeroProps,index)=>(
+                    <div
+                      key={index}
+                      className={`rounded-2xl px-12 py-6 overflow-hidden shadow-sm shadow-cl-gray-3 relative`}
+                    >
+                        <div className="relative flex items-end justify-center overflow-hidden aspect-[16/9] shadow-md shadow-cl-gray-3">
+                            <img 
+                              src={"/portfolio/heros/" + val.heroImage} 
+                              alt={val.name} 
+                              className="w-full h-full object-cover transition-transform duration-700"
+                            />
+                        </div>
+            
+                        {/*text*/}
+                        <div className="pt-4">
+                            <div className="flex items-start justify-between">
+                                <h3 className="font-[700]">
+                                    {val.name}
+                                </h3>
+                            </div>
+                            <p className=" font-[400]">{val.description}</p>
+                        </div>
 
+                        {/*tags*/}
+                        <div className="flex flex-row gap-4 mt-4 flex-wrap">
+                            {val.tags.map((tag:string,index)=>(
+                                <div className="rounded-md bg-cl-gray-2 p-1 px-2">
+                                    <p className="text-cl-gray-5">{tag}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-16"/>
+                        {/*links*/}
+                        <div className="flex flex-row items-end gap-4 mt-auto absolute bottom-6">
+                            {val.links.map(({text,link,icon},index)=>(
+                                <a href={link} target="_blank"> 
+                                    <Decorator gap={0.5} inText={true} clickable>
+                                    <div className="group relative w-fit h-fit flex flex-row justify-center items-center gap-2">
+                                        <img 
+                                            src={"/icons/"+icon}
+                                            className="w-4 h-4 inline-block group-hover:invert-[70%] "
+                                        />
+                                        {text}
+                                    </div>
+                                    </Decorator>
+                                </a>
+                            ))}
+
+                        </div>
+                    </div> 
+                ))}
             </div>
-       
-       </>
+            </motion.div>
+        </>
 
     );
 

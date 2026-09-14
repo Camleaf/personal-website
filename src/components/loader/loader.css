@@ -22,7 +22,7 @@
     transform: translateX(20rem);
   }
   100% {
-    transform: translateX(0) scale(1);
+    transform: translateX(0rem) scale(1);
   }
 }
 

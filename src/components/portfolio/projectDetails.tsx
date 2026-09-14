@@ -10,7 +10,6 @@ interface propTypes{
     
     onClick?:(name:string)=>void
 }
-
 function ProjectDetails({bigDescription=""}:propTypes){
     const ref = useRef(null);
 

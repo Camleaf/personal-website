@@ -1,0 +1,105 @@
+[
+    {
+        "name":"mechmania website",
+        "description":"Website for an annual robotics competition hosting 150+ students and 12+ schools across waterloo region",
+        "tags":[
+            "React", "Typescript", "Vite", "Turbo", "TailwindCSS"
+        ],
+        "links":[
+            {
+                "text":"Website",
+                "link":"https://mechmania.ca",
+                "icon":"globe.svg"
+
+            },
+            {
+                "text":"Source",
+                "link":"https://github.com/Mech-Mania/website",
+                "icon":"githubLogo.svg"
+            }
+        ],
+        "heroImage":"mechmania.jpg"
+    },
+ 
+
+    {
+        "name":"holo",
+        "description":"A custom 3d-printed mecanum drivetrain capable of field-centric holonomic motion",
+        "tags":[
+            "3D printed", "C++", "Solidworks", "CMake", "Esp-Arduino"
+        ],
+        "links":[
+            {
+                "text":"Video",
+                "link":"https://youtube.com/NOT_UPLOADED_YET",
+                "icon":"video.svg"
+
+            },
+            {
+                "text":"Source",
+                "link":"https://github.com/Camleaf/holo",
+                "icon":"githubLogo.svg"
+            }
+        ],
+        "heroImage":""
+    },
+    
+    {
+        "name":"portfolio site",
+        "description":"Personal portfolio site made with react",
+        "tags":[
+            "React", "Typescript", "Vite", "TailwindCSS"
+        ],
+        "links":[
+            {
+                "text":"Website",
+                "link":"alexcedw.vercel.app",
+                "icon":"globe.svg"
+
+            },
+            {
+                "text":"Source",
+                "link":"https://github.com/Camleaf/personal-website",
+                "icon":"githubLogo.svg"
+            }
+        ],
+        "heroImage":"portfolio-site.png"
+    },
+    {
+        "name":"cam-pw",
+        "description":"Custom password manager CLI supporting AES 256 encryption",
+        "tags":[
+            "C++", "CMake", "GPG"
+        ],
+        "links":[
+            {
+                "text":"Source",
+                "link":"https://github.com/Camleaf/cam-cli",
+                "icon":"githubLogo.svg"
+            }
+        ],
+        "heroImage":"cam-pw.png"
+    },
+    {
+        "name":"mechmania learn",
+        "description":"Open-source lesson collection for all competing Mechmania teams, made with Astro",
+        "tags":[
+            "Astro", "Vite", "Markdown"
+        ],
+        "links":[
+            {
+                "text":"Website",
+                "link":"https://learn.mechmania.ca",
+                "icon":"globe.svg"
+
+            },
+            {
+                "text":"Source",
+                "link":"https://github.com/Mech-Mania/learn",
+                "icon":"githubLogo.svg"
+            }
+        ],
+        "heroImage":"mechmania-learn.png"
+    }
+]
+
