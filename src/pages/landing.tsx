@@ -17,15 +17,15 @@ function Landing() {
                 // Global timing control
                 transition={{ duration: 0.5, ease: 'easeInOut' }}            
             >
-           <div className="w-full cont h-full flex flex-col md:flex-row items-center justify-center z-1 gap-8">
+           <div className="w-full cont h-full flex flex-col md:flex-row items-center justify-center z-1">
 
                 <div className="hidden lg:flex lg:justify-end z-10 w-fit h-full items-end justify-items-end hero-load ml-[0rem] lg2:ml-[-5rem]">
                     <div className="w-fit h-fit overflow-hidden rounded-xl">
                         <img id="" className="w-[40rem] max-w-none mt-[-12rem]" src="/hero.png"/>
                     </div>    
                 </div>
-                <div className={"box-border w-full md:w-fit h-full overflow-hidden flex flex-row items-center justify-center lg:justify-start z-0 flex-wrap"}>
-                    <div className="pt-0 pl-8 w-auto flex flex-col items-start justify-center hero-text-load">
+                <div className={"box-border w-full md:w-fit h-full pl-8 overflow-hidden flex flex-row lg:flex-col items-center lg:items-start justify-center z-0 flex-wrap"}>
+                    <div className="pt-0 w-auto flex flex-col items-start justify-center hero-text-load">
                         <Socials 
                             github="https://github.com/Camleaf"
                             linkedin="https://www.linkedin.com/in/alexander-edwards-1a6879342/"
@@ -39,11 +39,11 @@ function Landing() {
                         <br/>
                          
                     </div>
-                  
-                </div>
-                <div className="flex flex-col gap-4 justify-self-start hero-text-load ">
+                    <div className="flex flex-col gap-4 hero-text-load ">
                        <Navtext/> 
-                </div> 
+                    </div> 
+                </div>
+                
                 
             </div>
             </motion.div>
