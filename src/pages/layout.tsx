@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Landing from "./landing";
 import Portfolio from "./portfolio";
-import About from "./about";
 import { AnimatePresence } from "motion/react";
 
 function Layout() {
@@ -33,7 +32,6 @@ function Layout() {
                 <AnimatePresence mode="wait" initial={false}>        
                 <Routes location={location} key={location.pathname}>
                     <Route path="portfolio" element={<Portfolio/>}/>
-                    <Route path="about" element={<About/>}/>
                     <Route path="*" element={<Landing/>}/>
                 </Routes>
                 </AnimatePresence>
