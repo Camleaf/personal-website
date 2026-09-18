@@ -6,7 +6,6 @@ import Decorator from "./decoration/decorator";
 const pageInfo:{text:string,path:string, external:boolean}[] = [
     {text:"home",path:"/",external:false},
     {text:"projects",path:"/portfolio",external:false},
-    {text:"experience",path:"/experience",external:false},
     {text:"resume",path:"/resume.pdf",external:true},
 ];
 

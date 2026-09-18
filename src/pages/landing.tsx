@@ -19,12 +19,12 @@ function Landing() {
             >
            <div className="w-full cont h-full flex flex-col md:flex-row items-center justify-center z-1">
 
-                <div className="hidden lg:flex lg:justify-end z-10 w-fit h-full items-end justify-items-end hero-load ml-[0rem] lg2:ml-[-5rem]">
+                <div className="hidden lg:flex flex-1 lg:justify-end z-10 w-fit h-full items-end justify-items-end hero-load ml-[0rem] lg2:ml-[-5rem]">
                     <div className="w-fit h-fit overflow-hidden rounded-xl">
                         <img id="" className="w-[40rem] max-w-none mt-[-12rem]" src="/hero.png"/>
                     </div>    
                 </div>
-                <div className={"box-border w-full md:w-fit h-full pl-8 overflow-hidden flex flex-row lg:flex-col items-center lg:items-start justify-center z-0 flex-wrap"}>
+                <div className={"box-border flex-1 w-full md:w-fit h-full pl-8 overflow-hidden flex flex-row lg:flex-col items-center lg:items-start justify-center z-0 flex-wrap"}>
                     <div className="pt-0 w-auto flex flex-col items-start justify-center hero-text-load">
                         <Socials 
                             github="https://github.com/Camleaf"
@@ -35,7 +35,7 @@ function Landing() {
                         <h1 className="w-full text-left">alex edwards</h1>
 
                         <br/>
-                        <p className="w-96 text-left">Robotics & STEM-focused highschool student from Ontario, Canada</p>
+                        <p className="w-full text-left">Robotics & STEM-focused highschool student from Ontario, Canada</p>
                         <br/>
                          
                     </div>
