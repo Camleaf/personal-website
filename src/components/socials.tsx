@@ -9,7 +9,7 @@ interface propTypes{
 }
 
 
-function Socials({github,instagram,linkedin,email}:propTypes){
+function Socials({github,linkedin,email}:propTypes){
     
 
     return (
@@ -37,12 +37,7 @@ function Socials({github,instagram,linkedin,email}:propTypes){
                 </a>
                 :<></>}
 
-                {/* insta */}
-                {instagram?
-                <a href={instagram} target="_blank" className="align-middle ease-out hover:brightness-[300%] duration-200 cursor-pointer">
-                    <img src="/icons/instagramLogo.svg" className="w-8 h-8 hover:scale-110 ease-out duration-200"/>
-                </a>
-                :<></>}
+
 
                
 
